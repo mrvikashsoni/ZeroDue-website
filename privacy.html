@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for ZeroDue : Credit card & Bill Reminder Android Application.">
+  <title>Privacy Policy | ZeroDue : Credit Card & Bill Reminder</title>
+  <link rel="icon" type="image/png" href="assets/app_logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="header-brand" href="index.html">
+        <img class="brand-icon" src="assets/app_logo.png" alt="ZeroDue Logo" width="44" height="44">
+        <div class="brand-name">
+          <span class="title">ZeroDue</span>
+          <span class="subtitle">Credit Card & Bill Reminder</span>
+        </div>
+      </a>
+
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li>
+            <a class="nav-playstore-btn" href="index.html#playstore">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.128 2.128 0 0 1-.61-.433V2.247c.18-.182.385-.328.61-.433zm11.238 11.241l2.428-2.428-11.89-6.795 9.462 9.223zm0 1.89L5.385 24.168l11.89-6.795-2.428-2.428zm3.483-3.483l2.871 1.64c.952.544.952 1.433 0 1.977l-2.871 1.64-2.072-2.073 2.072-2.184z"/>
+              </svg>
+              <span>Google Play</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Privacy Policy Content -->
+  <main class="policy-page">
+    <div class="policy-container">
+      <div class="policy-header">
+        <h1>Privacy Policy</h1>
+        <div class="policy-meta">
+          <strong>Effective Date:</strong> November 19, 2026 | <strong>App Name:</strong> ZeroDue : Credit card & Bill Reminder
+        </div>
+      </div>
+
+      <div class="policy-content">
+        <div class="policy-highlight">
+          <strong>Core Privacy Commitment:</strong> ZeroDue is built as a <strong>100% offline</strong> application. We do not operate remote servers, we do not require account registration, and your financial data never leaves your physical mobile device.
+        </div>
+
+        <section>
+          <h2>1. Overview and Scope</h2>
+          <p>
+            This Privacy Policy applies to the mobile application <strong>ZeroDue : Credit card & Bill Reminder</strong> (referred to as "the Application", "we", "us", or "our"). This policy informs you of our practices regarding the collection, use, and disclosure of personal data when you use the Application.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Information Stored on Your Device</h2>
+          <p>All data processed by ZeroDue is stored exclusively in local on-device storage (SQLite database and encrypted secure storage):</p>
+          <ul>
+            <li><strong>Credit Card Spend Records:</strong> Bank name, card nickname/type, transaction amount, date, purpose/category, and merchant app/website.</li>
+            <li><strong>Recurring Bill Reminder Records:</strong> Reminder title/category, monthly statement generation day, payment due date, bill amount, notes, and active status.</li>
+            <li><strong>Security Credentials:</strong> A 4-digit PIN stored securely using platform-native hardware encryption via <code>FlutterSecureStorage</code>. Biometric authentication (fingerprint/face) is handled directly by Android's native BiometricPrompt API; biometric data is never accessible to or read by ZeroDue.</li>
+            <li><strong>Application Settings:</strong> User preferences such as biometric unlock toggle and smart payment detection toggle.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Device Permissions & How They Are Used</h2>
+          <p>ZeroDue requests only the specific Android permissions necessary to deliver its core offline functionality:</p>
+          <ul>
+            <li>
+              <strong>POST_NOTIFICATIONS:</strong> Required on Android 13 and above to display scheduled heads-up notifications for upcoming bill due dates and smart post-payment reminder prompts.
+            </li>
+            <li>
+              <strong>SCHEDULE_EXACT_ALARM & USE_EXACT_ALARM:</strong> Required to trigger timely recurring bill reminders at exact calendar days and times so you never miss a payment.
+            </li>
+            <li>
+              <strong>USE_BIOMETRIC & USE_FINGERPRINT:</strong> Used solely to allow you to unlock the app conveniently using your device's biometric sensors.
+            </li>
+            <li>
+              <strong>RECEIVE_BOOT_COMPLETED:</strong> Allows the application to automatically restore and reschedule your active bill alarms when your device restarts.
+            </li>
+            <li>
+              <strong>BIND_NOTIFICATION_LISTENER_SERVICE (Optional):</strong>
+              This service is used exclusively for the optional "Smart 2-Minute Post-Payment Prompt" feature. When enabled by the user in Settings:
+              <ul>
+                <li>The service checks system notifications locally on your device specifically for payment confirmation keywords from recognized payment and banking applications (such as Google Pay, PhonePe, Paytm, CRED).</li>
+                <li>When a payment confirmation is detected, the service starts a local 2-minute timer on your device, and then issues a notification asking if you made a credit card payment so you can quickly log it.</li>
+                <li><strong>Strict Privacy Rule:</strong> No notification text, personal messages, or payment details are stored, logged, transmitted, or shared. The detection algorithm runs entirely in local device memory and terminates immediately.</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Zero Network Transmission & Zero Third-Party Sharing</h2>
+          <p>
+            <strong>ZeroDue does not request <code>android.permission.INTERNET</code>.</strong>
+          </p>
+          <p>
+            Because the application does not have internet access permission:
+          </p>
+          <ul>
+            <li>We cannot and do not transmit any of your personal or financial information across the internet.</li>
+            <li>We do not integrate any third-party analytics SDKs (such as Google Analytics or Firebase Analytics).</li>
+            <li>We do not integrate advertising networks or tracking SDKs.</li>
+            <li>We do not sell, rent, trade, or share any user data with third parties under any circumstances.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. Data Retention and Deletion</h2>
+          <p>
+            Since all data resides strictly on your device:
+          </p>
+          <ul>
+            <li>You can delete individual spend records or bill reminders anytime from within the app using the Delete button.</li>
+            <li>You can clear all application data at any time via Android Settings &gt; Apps &gt; ZeroDue &gt; Storage &gt; Clear Data.</li>
+            <li>Uninstalling the ZeroDue application automatically and permanently deletes all stored spends, reminders, settings, and PIN data from your device.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>6. Children's Privacy</h2>
+          <p>
+            ZeroDue is not intended for use by children under the age of 13. We do not knowingly collect or solicit personal information from children. If you believe a child has provided data through the app, please note that all data can be erased immediately by uninstalling the app.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Changes to This Privacy Policy</h2>
+          <p>
+            We may update our Privacy Policy from time to time. Any changes will be posted on this web page with an updated "Effective Date". Because the app is offline, we recommend reviewing this policy periodically online.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Contact Us</h2>
+          <p>
+            If you have any questions or concerns regarding this Privacy Policy or ZeroDue's offline architecture, please contact us at:
+          </p>
+          <p>
+            <strong>Email:</strong> <a href="mailto:contact@jodoclub.com">contact@jodoclub.com</a><br>
+            <strong>WhatsApp:</strong> <a href="https://wa.me/917764827252?text=Hello%20ZeroDue%20Support" target="_blank" rel="noopener noreferrer">+91 7764827252 (Chat Only, No Calls)</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 ZeroDue : Credit card & Bill Reminder. All rights reserved.</div>
+      <div><a href="index.html" style="color: #94A3B8;">Back to Home</a></div>
+    </div>
+  </footer>
+
+</body>
+</html>
